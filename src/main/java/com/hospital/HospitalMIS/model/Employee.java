@@ -37,10 +37,7 @@ public class Employee {
     private String telephone;
 
 //    @ManyToOne
-//    @JoinColumns({
-//            @JoinColumn(name = "dep_code", referencedColumnName = "dep_code"),
-//            @JoinColumn(name = "dep_num", referencedColumnName = "dep_num")
-//    })
+//    @JoinColumn(name = "dep_id")
 //    private Department department;
 
 }
