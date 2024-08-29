@@ -9,6 +9,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
     // Custom query methods
     List<Employee> findByLastName(String lastName);
-    //List<Employee> findByDepartmentOrderByFirstNameAsc(String department);
     List<Employee> findByFirstNameAndLastName(String firstName, String lastName);
 }
