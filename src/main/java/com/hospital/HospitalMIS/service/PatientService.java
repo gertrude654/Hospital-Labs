@@ -113,6 +113,11 @@ public class PatientService {
         repo.delete(patient);
     }
 
+    @Transactional(readOnly = true)
+    public  List<Patient>getAllPatients(){
+        return repo.findAll();
+    }
+
     // Custom query methods
     @Transactional(readOnly = true)
     public List<Patient> getPatientsByName(String name) {
