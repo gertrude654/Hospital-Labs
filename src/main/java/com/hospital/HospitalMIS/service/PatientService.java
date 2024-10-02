@@ -31,29 +31,6 @@ public class PatientService {
         this.transactionManager = transactionManager;
     }
 
-//    // Create a new Patient using programmatic transactions
-////    @Cacheable(value = "patients", key = "#id")
-//    @Cacheable(value = "patients")
-//    public Patient createPatient(Patient patient) {
-//        DefaultTransactionDefinition def = new DefaultTransactionDefinition();
-//        def.setName("CreatePatientTransaction");
-//        def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
-//
-//        TransactionStatus status = transactionManager.getTransaction(def);
-//
-//        try {
-//            // Save the patient
-//            Patient savedPatient = repo.save(patient);
-//            // Commit the transaction
-//            transactionManager.commit(status);
-//            return savedPatient;
-//        } catch (Exception e) {
-//            // Rollback the transaction on error
-//            transactionManager.rollback(status);
-//            throw e; // Re-throw the exception to indicate failure
-//        }
-//    }
-
     @Autowired
     private CacheManager cacheManager;
 
